@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: teal;
+}
+
+.section {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+#del {
+  background-color: gold;
+  color: rgba(0, 0, 0, 0.8);
+}
+#del:hover {
+  background-color: rgb(255, 230, 89);
+}
+
+#ac {
+  background-color: #c63637;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#ac:hover {
+  background-color: rgba(255, 83, 83);
+}
+.section > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.section > button:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#result {
+  background-color: rgb(212, 82, 59);
+  color: white;
+}
+
+#result:hover {
+  background-color: rgb(243, 117, 95);
+}
+.span-two {
+  grid-column: span 2;
+}
+
+.totalDisplay {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.totalDisplay .previousDisplay {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.totalDisplay .currentDisplay {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 2.5rem;
+}
